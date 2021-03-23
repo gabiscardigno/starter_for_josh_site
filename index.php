@@ -45,47 +45,48 @@ wp_reset_query();?>
         </div><!-- container-->
     </section>
 
-    <section class="container-fluid articlesbg">
+   <section class="container-fluid articlesbg">
         <div class="container">
-            <div class="row">
-                <!-- a row that gives us access to the BS columns-->
+            <div class="row"><!--  a row that gives us access to the BS columns-->
                 <div class="article-title text-center">
-                    <h3>LATEST ARTICLES
-                    </h3>
+                    <h3>LATEST ARTICLES</h3>
                 </div>
-                <div class="col-md-4 article-cent">
-<?php $post_id = 862;
+               <div class="col-md-4 article-cent">
+                   
+<?php $post_id = 1;
 $queried_post = get_post($post_id);?>
 <?php echo get_the_post_thumbnail($queried_post, 'full', array('class' => 'img-responsive')); ?>
 <h4><?php echo $queried_post->post_title; ?></h4>
 <?php echo $queried_post->post_excerpt; ?>
-<?php echo '<a class="readmore" href="'.get_permalink($queried_post).'"><br>CONTINUE READING</a>';?>
-                    
+<?php echo '<a class="readmore" href="'.get_permalink($queried_post).'"><br>CONTINUE READING</a>';?>                       
+ 
                 </div>
+           
+     <div class="col-md-4 article-cent">
+                                      
+<?php $post_id = 1;
+$queried_post = get_post($post_id);?>
+<?php echo get_the_post_thumbnail($queried_post, 'full', array('class' => 'img-responsive')); ?>
+<h4><?php echo $queried_post->post_title; ?></h4>
+<?php echo $queried_post->post_excerpt; ?>
+<?php echo '<a class="readmore" href="'.get_permalink($queried_post).'"><br>CONTINUE READING</a>';?>                 
+              
+  </div>
+  <div class="col-md-4 article-cent">
+                                        
+<?php $post_id = 1;
+$queried_post = get_post($post_id);?>
+<?php echo get_the_post_thumbnail($queried_post, 'full', array('class' => 'img-responsive')); ?>
+<h4><?php echo $queried_post->post_title; ?></h4>
+<?php echo $queried_post->post_excerpt; ?>
+<?php echo '<a class="readmore" href="'.get_permalink($queried_post).'"><br>CONTINUE READING</a>';?>     
                 
-                <div class="col-md-4 article-cent">
-                    
-<?php $post_id = 864;
-$queried_post = get_post($post_id);?>
-<?php echo get_the_post_thumbnail($queried_post, 'full', array('class' => 'img-responsive')); ?>
-<h4><?php echo $queried_post->post_title; ?></h4>
-<?php echo $queried_post->post_excerpt; ?>
-<?php echo '<a class="readmore" href="'.get_permalink($queried_post).'"><br>CONTINUE READING</a>';?>
-                    
-                </div>
-                <div class="col-md-4 article-cent">
-                    
-<?php $post_id = 866;
-$queried_post = get_post($post_id);?>
-<?php echo get_the_post_thumbnail($queried_post, 'full', array('class' => 'img-responsive')); ?>
-<h4><?php echo $queried_post->post_title; ?></h4>
-<?php echo $queried_post->post_excerpt; ?>
-<?php echo '<a class="readmore" href="'.get_permalink($queried_post).'"><br>CONTINUE READING</a>';?>
-                    
-                </div>
+   </div>  
 
-            </div>
-        </div>
-    </section>
+</div><!-- row-->
+</div><!-- container-->
+        
+    </section><!-- container-fluid-->
+
 
 <?php get_footer(); /* Tells WordPress to include footer.php */ ?>
