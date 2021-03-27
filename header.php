@@ -48,7 +48,7 @@
 </head>
 
 <body>
-   <header class="container-fluid herobg">
+    <header class="container-fluid herobg">
         <!-- div for the main image that stretches to the edge of the page-->
         <nav class="navbar">
             <div class="container-fluid">
@@ -62,13 +62,15 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">PROJECTS</a></li>
-                        <li><a href="#">PUBLICATIONS</a></li>
-                        <li><a href="#">CV</a></li>
-                        <li><a href="#">CONTACT</a></li>
+<?php wp_nav_menu(array(
+        'menu' => 'Top menu',
+        'items_wrap'=>'%3$s',
+        'container' => false,
+        'list_item_class' => "nav-item",
+        'link_class' => "nav-link",
+        )); ?>
                     </ul>
+
                 </div>
             </div>
         </nav>
