@@ -48,7 +48,7 @@
 </head>
 
 <body>
-    <header class="container-fluid herobg">
+    <header class="container-fluid herobg"<?php if ( get_field(' headerbackgroundimage ') ) { echo 'style="background: url(' . get_field(' headerbackgroundimage ') . ')"'; } ?>>
         <!-- div for the main image that stretches to the edge of the page-->
         <nav class="navbar">
             <div class="container-fluid">
@@ -77,7 +77,7 @@
 
         <div class="container">
             <!--div that holds the content in the middle of the page-->
-            <h1> Games Design For the Future</h1>
+            <h1><?php the_field('maintagline'); ?></h1>
             <!--the main tag line-->
         </div> <!-- container -->
 
